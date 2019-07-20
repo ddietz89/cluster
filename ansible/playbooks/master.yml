@@ -1,0 +1,2 @@
+# Master Playbook
+- import_playbook: base_packages.yml
