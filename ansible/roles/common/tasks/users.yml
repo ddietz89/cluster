@@ -1,0 +1,6 @@
+# Set up users
+- name: add ddietz
+  user:
+    name: ddietz
+    shell: /bin/bash
+    createhome: True

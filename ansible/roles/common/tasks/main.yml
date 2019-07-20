@@ -1,2 +1,2 @@
-- name: Include tasks
-  include_tasks: base_packages.yml
+- include_tasks: base_packages.yml
+- include_tasks: users.yml
