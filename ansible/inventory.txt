@@ -1,4 +1,4 @@
-master ansible_host=master.dandietz.com ansible_user=root ansible_ssh_private_key=/root/.ssh/id_rsa
+master ansible_host=master.dandietz.com 
 
 [servers]
 master

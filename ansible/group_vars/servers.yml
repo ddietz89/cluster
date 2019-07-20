@@ -1,0 +1,2 @@
+ansible_user: root 
+ansible_ssh_private_key: /root/.ssh/id_rsa
