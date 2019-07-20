@@ -3,7 +3,6 @@
   name: base_packages
   hosts: all
   tasks:
-   - name: Install git
-     yum:
-       name: git
-       state: present
+     - yum: name='{{ item }}' state=present
+       with_items:
+         - git
