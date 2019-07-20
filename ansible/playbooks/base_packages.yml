@@ -1,8 +1,0 @@
-#Playbook to install basic packages
-- 
-  name: base_packages
-  hosts: all
-  tasks:
-     - yum: name='{{ item }}' state=present
-       with_items:
-         - git

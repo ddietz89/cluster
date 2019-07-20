@@ -1,0 +1,6 @@
+# Common playbook
+-
+  name: Set common files and configurations
+  hosts: all
+  roles:
+    - common
