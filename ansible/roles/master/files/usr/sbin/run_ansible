@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ $UID -ne 0 ]]; then
+	echo "Error! You must be root!"
+	exit
+fi
+
+cd /root/cluster/ansible/
+git pull
+
+ansible-playbook `ls *.yml` -i inventory.txt --vault-password-file=/root/.vaultpass

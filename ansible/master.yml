@@ -1,0 +1,6 @@
+# Common playbook
+-
+  name: Set files and configurations for master
+  hosts: master
+  roles:
+    - master

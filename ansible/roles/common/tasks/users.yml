@@ -4,3 +4,9 @@
     name: ddietz
     shell: /bin/bash
     createhome: True
+
+- name: copy template ddietz homedir
+  copy:
+    src: home/ddietz/
+    dest: /home/ddietz/
+     
