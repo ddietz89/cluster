@@ -9,4 +9,5 @@
   copy:
     src: home/ddietz/
     dest: /home/ddietz/
+    owner: ddietz
      
