@@ -10,4 +10,12 @@
     src: home/ddietz/
     dest: /home/ddietz/
     owner: ddietz
+
+- file:
+    path: /home/ddietz/.ssh
+    mode: '0700'
+     
+- file:
+    path: /home/ddietz/.ssh/id_rsa
+    mode: '0600'
      
