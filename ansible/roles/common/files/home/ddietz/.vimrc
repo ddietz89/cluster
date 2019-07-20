@@ -1,2 +1,2 @@
 set autoindent
-set syntax
+syntax on
