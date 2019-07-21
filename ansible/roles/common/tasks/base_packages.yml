@@ -1,6 +1,7 @@
 - name: base packages
   yum: name='{{ item }}' state=present
   with_items:
+         - autoconf
          - bzip2
          - bzip2-devel
          - bzip2-libs
