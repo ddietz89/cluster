@@ -1,0 +1,13 @@
+- name: Copy custom rpms
+  copy:
+     src: var/packages/
+     dest: /var/packages/
+
+- name: Custom packages
+  yum: name='{{ item }}' state=present
+  with_items:
+    - /var/packages/munge-0.5.13-1.el7.x86_64.rpm
+    - /var/packages/munge-debuginfo-0.5.13-1.el7.x86_64.rpm
+    - /var/packages/munge-devel-0.5.13-1.el7.x86_64.rpm
+    - /var/packages/munge-libs-0.5.13-1.el7.x86_64.rpm
+

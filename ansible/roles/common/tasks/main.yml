@@ -1,3 +1,4 @@
 - include_tasks: base_packages.yml
+- include_tasks: custom_packages.yml
 - include_tasks: users.yml
 - include_tasks: sudoers.yml
