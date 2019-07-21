@@ -3,6 +3,7 @@
   with_items:
          - bzip2
          - bzip2-libs
+         - gcc
          - git
          - vim
          - wget
