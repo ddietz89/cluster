@@ -5,7 +5,6 @@
          - bzip2-libs
          - gcc
          - git
-         - munge
          - munge-libs
          - munge-devel
          - readline-devel
