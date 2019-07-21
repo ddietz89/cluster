@@ -6,8 +6,6 @@
          - bzip2-libs
          - gcc
          - git
-         - munge-libs
-         - munge-devel
          - readline-devel
          - openssl-devel
          - perl
