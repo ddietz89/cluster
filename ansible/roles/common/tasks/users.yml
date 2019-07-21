@@ -4,6 +4,7 @@
     name: ddietz
     shell: /bin/bash
     createhome: True
+    uid: 1001
 
 - name: copy template ddietz homedir
   copy:
@@ -24,4 +25,5 @@
     name: slurm
     shell: /bin/bash
     createhome: False
+    uid: 1002
 
