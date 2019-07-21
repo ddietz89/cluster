@@ -10,6 +10,7 @@
          - mariadb
          - mariadb-devel
          - mariadb-libs
+         - mlocate
          - gcc
          - git
          - readline-devel
