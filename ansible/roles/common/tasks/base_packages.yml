@@ -12,6 +12,7 @@
          - readline-devel
          - openssl-devel
          - perl
+         - perl-ExtUtils-MakeMaker
          - pam-devel
          - rpm-build
          - vim
