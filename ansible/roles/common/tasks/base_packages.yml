@@ -5,6 +5,12 @@
          - bzip2-libs
          - gcc
          - git
+         - munge
+         - munge-libs
+         - munge-devel
+         - readline-devel
+         - perl
+         - pam-devel
          - rpm-build
          - vim
          - wget
