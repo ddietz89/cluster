@@ -7,6 +7,9 @@
          - bzip2-devel
          - bzip2-libs
          - libtool
+         - mariadb
+         - mariadb-devel
+         - mariadb-libs
          - gcc
          - git
          - readline-devel
