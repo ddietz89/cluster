@@ -10,4 +10,11 @@
     - /var/packages/munge-debuginfo-0.5.13-1.el7.x86_64.rpm
     - /var/packages/munge-devel-0.5.13-1.el7.x86_64.rpm
     - /var/packages/munge-libs-0.5.13-1.el7.x86_64.rpm
-
+    - /var/packages/slurm-19.05.1-2.el7.x86_64.rpm
+    - /var/packages/slurm-contribs-19.05.1-2.el7.x86_64.rpm
+    - /var/packages/slurm-devel-19.05.1-2.el7.x86_64.rpm
+    - /var/packages/slurm-libpmi-19.05.1-2.el7.x86_64.rpm
+    - /var/packages/slurm-openlava-19.05.1-2.el7.x86_64.rpm
+    - /var/packages/slurm-pam_slurm-19.05.1-2.el7.x86_64.rpm
+    - /var/packages/slurm-perlapi-19.05.1-2.el7.x86_64.rpm
+    - /var/packages/slurm-slurmd-19.05.1-2.el7.x86_64.rpm

@@ -1,0 +1,9 @@
+- name: Copy custom rpms
+  copy:
+     src: var/packages/
+     dest: /var/packages/
+
+- name: Custom packages
+  yum: name='{{ item }}' state=present
+  with_items:
+    - /var/packages/slurm-slurmctld-19.05.1-2.el7.x86_64.rpm
