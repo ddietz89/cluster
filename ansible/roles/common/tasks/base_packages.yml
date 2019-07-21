@@ -2,9 +2,11 @@
   yum: name='{{ item }}' state=present
   with_items:
          - autoconf
+         - automake
          - bzip2
          - bzip2-devel
          - bzip2-libs
+         - libtool
          - gcc
          - git
          - readline-devel
