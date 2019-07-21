@@ -19,3 +19,9 @@
     path: /home/ddietz/.ssh/id_rsa
     mode: '0600'
      
+- name: add slurm
+  user:
+    name: slurm
+    shell: /bin/bash
+    createhome: False
+
