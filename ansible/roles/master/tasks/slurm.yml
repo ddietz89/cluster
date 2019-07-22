@@ -1,8 +1,8 @@
 - name: set up slurm files 
   file:
-    path: /var/spool/slurm 
-    mode: '0755'
-    state: directory
+    path: /var/run/slurmctld.pid
+    mode: '0644'
+    state: file
     owner: slurm
     group: slurm
      
