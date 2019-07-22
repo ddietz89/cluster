@@ -17,12 +17,8 @@
     mode: '0700'
      
 - file:
-  copy:
-    src: home/ddietz/.ssh/id_rsa
-    dest: /home/ddietz/.ssh/id_rsa
+    path: /home/ddietz/.ssh/id_rsa
     mode: '0600'
-    owner: ddietz
-    group: ddietz
      
 - name: add slurm
   user:
