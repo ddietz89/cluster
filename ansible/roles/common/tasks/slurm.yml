@@ -6,6 +6,14 @@
     owner: slurm
     group: slurm
 
+- name: slurm directory
+  file:
+    path: /etc/slurm
+    mode: '0755'
+    state: directory
+    owner: slurm
+    group: slurm
+
 - name: set up slurm config
   copy:
     src: etc/slurm/slurm.conf
