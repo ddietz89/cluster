@@ -26,3 +26,8 @@
   service:
     name: munge
     state: started
+
+- name: slurmd service
+  service:
+    name: slurmd
+    state: started
