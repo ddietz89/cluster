@@ -19,5 +19,5 @@
     src: etc/munge/munge.key
     dest: /etc/munge/munge.key
     mode: '0644'
-    owner: root
-    group: root
+    owner: munge
+    group: munge
