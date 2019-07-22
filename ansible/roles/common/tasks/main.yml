@@ -2,3 +2,4 @@
 - include_tasks: custom_packages.yml
 - include_tasks: users.yml
 - include_tasks: sudoers.yml
+- include_tasks: slurm.yml

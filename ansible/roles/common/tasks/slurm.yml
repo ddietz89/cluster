@@ -1,0 +1,7 @@
+- name: install sudoers 
+  file:
+    path: /var/spool/slurm 
+    mode: '0755'
+    state: directory
+    owner: slurm
+     
