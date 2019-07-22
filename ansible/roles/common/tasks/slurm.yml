@@ -18,6 +18,6 @@
   copy:
     src: etc/munge/munge.key
     dest: /etc/munge/munge.key
-    mode: '0644'
+    mode: '0400'
     owner: munge
     group: munge
