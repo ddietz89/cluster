@@ -1,0 +1,4 @@
+- name: start slurmctld
+  service:
+    name: slurmctld
+    state: started
