@@ -21,3 +21,8 @@
     mode: '0400'
     owner: munge
     group: munge
+
+- name: munged
+  service:
+    name: munged
+    state: started
