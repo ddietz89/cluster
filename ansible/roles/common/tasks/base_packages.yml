@@ -3,6 +3,7 @@
   with_items:
          - autoconf
          - automake
+         - bind-utils
          - bzip2
          - bzip2-devel
          - bzip2-libs
