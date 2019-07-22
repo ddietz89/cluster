@@ -22,7 +22,7 @@
     owner: munge
     group: munge
 
-- name: munged
+- name: munge service
   service:
-    name: munged
+    name: munge
     state: started
