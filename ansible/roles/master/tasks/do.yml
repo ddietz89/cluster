@@ -9,3 +9,7 @@
     src: usr/sbin/do_apikey
     dest: /usr/sbin/do_apikey
     mode: '0755'
+
+- name: DO API libryar
+  pip:
+    name: python-digitalocean
