@@ -1,27 +1,4 @@
 - name: base packages
-  yum: name='{{ item }}' state=present
-  with_items:
-         - autoconf
-         - automake
-         - bind-utils
-         - bzip2
-         - bzip2-devel
-         - bzip2-libs
-         - epel-release
-         - libtool
-         - mariadb
-         - mariadb-devel
-         - mariadb-libs
-         - mlocate
-         - gcc
-         - git
-         - readline-devel
-         - openssl-devel
-         - perl
-         - perl-ExtUtils-MakeMaker
-         - pam-devel
-         - python2-pip
-         - rpm-build
-         - vim
-         - wget
-         - zlib-devel
+  yum: 
+    name: [ autoconf, automake, bind-utils, bzip2, bzip2-devel, bzip2-libs, epel-release, libtool, mariadb, mariadb-devel, mariadb-libs, mlocate, gcc, git, readline-devel, openssl-devel, perl, perl-ExtUtils-MakeMaker, pam-devel, python2-pip, rpm-build, vim, wget, zlib-devel ]
+    state=present
