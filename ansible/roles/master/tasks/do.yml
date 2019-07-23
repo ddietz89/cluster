@@ -1,0 +1,5 @@
+#- name: DO deploy script
+  #copy:
+    #src: usr/sbin/deploy_droplet
+    #dest: /usr/sbin/deploy_droplet
+    #mode: '0755'

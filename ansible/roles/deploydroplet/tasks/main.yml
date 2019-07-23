@@ -1,0 +1,10 @@
+- digital_ocean:
+    state: present
+    command: droplet
+    name: do-nyc00
+    api_token: '{{ do_apikey }}'
+    size_id: 1gb
+    region_id: nyc1
+    image_id: centos-76-x64
+    wait_timeout: 500
+    register: do-nyc00

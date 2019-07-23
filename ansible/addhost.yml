@@ -1,0 +1,6 @@
+# Add host yaml playbook
+-
+  name: Insert new host
+  hosts: all
+  roles:
+    - addhost
