@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/python
 
 api_key=`cat /usr/sbin/do_apikey`
 
