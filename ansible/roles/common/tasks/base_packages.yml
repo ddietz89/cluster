@@ -20,6 +20,7 @@
          - perl
          - perl-ExtUtils-MakeMaker
          - pam-devel
+         - python2-pip
          - rpm-build
          - vim
          - wget
