@@ -8,7 +8,7 @@
   copy:
     src: usr/sbin/do_apikey
     dest: /usr/sbin/do_apikey
-    mode: '0755'
+    mode: '0400'
 
 - name: DO API libryar
   pip:
