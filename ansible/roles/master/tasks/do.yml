@@ -1,5 +1,11 @@
-#- name: DO deploy script
-  #copy:
-    #src: usr/sbin/deploy_droplet
-    #dest: /usr/sbin/deploy_droplet
-    #mode: '0755'
+- name: DO deploy script
+  copy:
+    src: usr/sbin/deploy_droplet
+    dest: /usr/sbin/deploy_droplet
+    mode: '0755'
+
+- name: DO api key
+  copy:
+    src: usr/sbin/do_apikey
+    dest: /usr/sbin/do_apikey
+    mode: '0755'
