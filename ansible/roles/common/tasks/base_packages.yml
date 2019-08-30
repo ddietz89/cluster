@@ -29,3 +29,6 @@
 - name: pip packages
   pip: 
     name: flask
+- name: pip packages
+  pip: 
+    name: flask-wtf
