@@ -25,3 +25,7 @@
          - vim
          - wget
          - zlib-devel
+
+- name: pip packages
+  pip: 
+    name: flask
