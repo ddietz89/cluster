@@ -1,4 +1,6 @@
 master ansible_host=master.dandietz.com 
+node01 ansible_host=ec2-52-14-7-8.us-east-2.compute.amazonaws.com
 
 [servers]
 master
+node01
