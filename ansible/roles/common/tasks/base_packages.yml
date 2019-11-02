@@ -7,7 +7,7 @@
          - bzip2
          - bzip2-devel
          - bzip2-libs
-         - "wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
+         - "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
          - libtool
          - mariadb
          - mariadb-devel
