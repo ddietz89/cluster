@@ -7,6 +7,7 @@
 # 
 # The following lines are desirable for IPv4 capable hosts
 18.191.167.1 master.dandietz.com master
+172.31.33.7 node01 
 127.0.0.1 localhost.localdomain localhost
 127.0.0.1 localhost4.localdomain4 localhost4
 
