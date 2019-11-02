@@ -6,8 +6,8 @@
 #     /etc/cloud/cloud.cfg or cloud-config from user-data
 # 
 # The following lines are desirable for IPv4 capable hosts
-10.136.157.242 master master
-10.136.157.242 master.cluster master
+18.191.167.1 master master
+18.191.167.1 master.cluster master
 127.0.0.1 localhost.localdomain localhost
 127.0.0.1 localhost4.localdomain4 localhost4
 
@@ -15,6 +15,3 @@
 ::1 master master
 ::1 localhost.localdomain localhost
 ::1 localhost6.localdomain6 localhost6
-
-10.136.157.242 master master
-10.136.100.185 do-nyc00 do-nyc00
