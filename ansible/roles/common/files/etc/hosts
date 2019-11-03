@@ -8,6 +8,15 @@
 # The following lines are desirable for IPv4 capable hosts
 172.31.19.9 master
 172.31.33.7 node01 
+172.31.42.13 node02
+127.0.0.1 node03
+127.0.0.1 node04
+127.0.0.1 node05
+127.0.0.1 node06
+127.0.0.1 node07
+127.0.0.1 node08
+127.0.0.1 node09
+127.0.0.1 node10
 127.0.0.1 localhost.localdomain localhost
 127.0.0.1 localhost4.localdomain4 localhost4
 
