@@ -8,4 +8,4 @@ fi
 cd /root/cluster/ansible/
 git pull
 
-ansible-playbook common.yml node.yml -i inventory.txt --vault-password-file=/root/.vaultpass
+ansible-playbook common.yml node.yml -i `hostname` --vault-password-file=/root/.vaultpass
