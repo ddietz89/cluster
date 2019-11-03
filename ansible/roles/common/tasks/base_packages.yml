@@ -32,3 +32,6 @@
 - name: pip packages
   pip: 
     name: flask-wtf
+- name: pip packages
+  pip: 
+    name: boto3
