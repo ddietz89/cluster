@@ -31,6 +31,7 @@ try:
     print response
 except ClientError as e:
     print e
+    sys.exit(1)
 
 # Wait for instance to boot
 started = False

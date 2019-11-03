@@ -29,5 +29,4 @@ try:
     print response
 except ClientError as e:
     print e
-
-
+    sys.exit(1)

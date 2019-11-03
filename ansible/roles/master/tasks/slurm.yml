@@ -14,3 +14,9 @@
     src: usr/sbin/stop_instance.py
     dest: /usr/sbin/stop_instance.py
     mode: '0755'
+
+- name: install configure_node script
+  copy:
+    src: usr/sbin/configure_node.sh
+    dest: /usr/sbin/configure_node.sh
+    mode: '0755'
