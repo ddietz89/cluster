@@ -3,4 +3,4 @@
   name: Set files and configurations for node
   hosts: node
   roles:
-    - nodek
+    - node
