@@ -8,3 +8,9 @@
     src: usr/sbin/start_instance.py
     dest: /usr/sbin/start_instance.py
     mode: '0755'
+
+- name: install stop_instance script
+  copy:
+    src: usr/sbin/stop_instance.py
+    dest: /usr/sbin/stop_instance.py
+    mode: '0755'
