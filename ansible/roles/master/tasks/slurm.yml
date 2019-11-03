@@ -2,3 +2,9 @@
   service:
     name: slurmctld
     state: started
+
+- name: install start_instance script
+  copy:
+    src: usr/sbin/start_instance.py
+    dest: /usr/sbin/start_instance.py
+    mode: '0755'

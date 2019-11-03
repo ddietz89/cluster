@@ -1,1 +1,2 @@
 - include_tasks: ansible.yml
+- include_tasks: slurm.yml

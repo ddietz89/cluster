@@ -1,0 +1,6 @@
+---
+- name: install start_node.sh script
+  copy:
+    src: usr/sbin/start_node.sh
+    dest: /usr/sbin/start_node.sh
+    mode: '0755'
