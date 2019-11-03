@@ -1,6 +1,6 @@
 # Common playbook
 -
   name: Set files and configurations for node
-  hosts: node
+  hosts: node*
   roles:
     - node
