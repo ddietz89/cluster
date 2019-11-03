@@ -26,11 +26,13 @@ if target_instance is None:
     sys.exit(1)
 
 
-#try:
-    #response = ec2.start_instances(InstanceIds=[target_instance['InstanceId']])
-    #print response
-#except ClientError as e:
-    #print e
+try:
+    response = ec2.start_instances(InstanceIds=[target_instance['InstanceId']])
+    print response
+except ClientError as e:
+    print e
+
+pprint(target_instance)
 
 # Wait for instance to boot
 started = False
@@ -46,6 +48,11 @@ if not started:
     print "Error! Startup timed out."
     sys.exit(1)
 
+process = Popen("ssh " + target_instance_string + " /usr/sbin/run_ansible", shell=True, stdout=PIPE, stderr=PIPE)
+stdout, stderr = process.communicate()
 
 process = Popen("ssh " + target_instance_string + " /usr/sbin/start_node.sh", shell=True, stdout=PIPE, stderr=PIPE)
+stdout, stderr = process.communicate()
+
+process = Popen("sudo scontrol update NodeName=" + target_instance_string + " State=RESUME", shell=True, stdout=PIPE, stderr=PIPE)
 stdout, stderr = process.communicate()
