@@ -45,5 +45,5 @@ stdout, stderr = process.communicate()
 process = Popen("git -C ~/cluster/ commit ~/cluster/ansible/roles/common/files/etc/hosts -m 'Creating new host' && git -C ~/cluster/ push", shell=True, stdout=PIPE, stderr=PIPE)
 stdout, stderr = process.communicate()
 
-process = Popen("sudo /usr/sbin/run_ansible", shell=True, stdout=PIPE, stderr=PIPE)
+process = Popen("/usr/sbin/configure_node.sh " + target_instance_string, shell=True, stdout=PIPE, stderr=PIPE)
 stdout, stderr = process.communicate()
