@@ -32,8 +32,6 @@ try:
 except ClientError as e:
     print e
 
-pprint(target_instance)
-
 # Wait for instance to boot
 started = False
 count = 0
@@ -53,6 +51,8 @@ stdout, stderr = process.communicate()
 
 process = Popen("ssh " + target_instance_string + " /usr/sbin/start_node.sh", shell=True, stdout=PIPE, stderr=PIPE)
 stdout, stderr = process.communicate()
+
+time.sleep(5)
 
 process = Popen("sudo scontrol update NodeName=" + target_instance_string + " State=RESUME", shell=True, stdout=PIPE, stderr=PIPE)
 stdout, stderr = process.communicate()
