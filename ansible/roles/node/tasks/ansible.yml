@@ -1,0 +1,16 @@
+- name: install ansible
+  yum: name='{{ item }}' state=present
+  with_items:
+         - ansible 
+
+- name: install run_ansible script
+  copy:
+    src: usr/sbin/run_ansible
+    dest: /usr/sbin/run_ansible
+    mode: '0755'
+
+- name: install ansible cfg
+  copy:
+    src: etc/ansible/ansible.cfg
+    dest: /etc/ansible/ansible.cfg
+    mode: '0644'
