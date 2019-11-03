@@ -8,7 +8,7 @@
 # The following lines are desirable for IPv4 capable hosts
 172.31.19.9 master
 172.31.33.7 node01 
-172.31.43.134 node02
+172.31.44.47 node02
 127.0.0.1 node03
 127.0.0.1 node04
 127.0.0.1 node05
