@@ -4,7 +4,7 @@ hostname $1
 echo $1 > /etc/hostname
 
 yum install git -y
-amazon-linux-extra install ansible2 -y
+amazon-linux-extras install ansible2 -y
 
 mv ~ec2-user/id_rsa* /root/.ssh/
 mv ~ec2-user/.vaultpass /root/
