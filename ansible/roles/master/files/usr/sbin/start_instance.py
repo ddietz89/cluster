@@ -27,13 +27,13 @@ if target_instance is None:
     sys.exit(1)
 
 
-if inst['Instances'][0]['State']['Name'] == 'stopped':
-    try:
-        response = ec2.start_instances(InstanceIds=[target_instance['InstanceId']])
-        print response
-    except Exception as e:
-        print e
-        sys.exit(1)
+pprint(inst)
+try:
+    response = ec2.start_instances(InstanceIds=[target_instance['InstanceId']])
+    print response
+except Exception as e:
+    print e
+    sys.exit(1)
 
 process = Popen("ssh " + target_instance_string + " /usr/sbin/run_ansible", shell=True, stdout=PIPE, stderr=PIPE)
 stdout, stderr = process.communicate()
