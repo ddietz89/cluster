@@ -12,5 +12,8 @@ mv ~ec2-user/.vaultpass /root/
 cd /root/
 export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 git clone git@github.com:ddietz89/cluster.git 
+
+cd cluster/ansible/
+
 ansible-playbook common.yml node.yml -i \"$1,\" --vault-password-file=/root/.vaultpass
 
