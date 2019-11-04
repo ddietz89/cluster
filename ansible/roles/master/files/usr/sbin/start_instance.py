@@ -55,6 +55,8 @@ if not started:
 
 process = Popen("ssh " + target_instance_string + " /usr/sbin/start_node.sh", shell=True, stdout=PIPE, stderr=PIPE)
 stdout, stderr = process.communicate()
+print stdout
+print stderr
 
 time.sleep(5)
 
