@@ -67,7 +67,7 @@ print stderr
 process = Popen("/usr/sbin/stop_instance.py " + target_instance_string, shell=True, stdout=PIPE, stderr=PIPE)
 stdout, stderr = process.communicate()
 
-time.sleep(30)
+time.sleep(45)
 
 process = Popen("/usr/sbin/start_instance.py " + target_instance_string, shell=True, stdout=PIPE, stderr=PIPE)
 stdout, stderr = process.communicate()
