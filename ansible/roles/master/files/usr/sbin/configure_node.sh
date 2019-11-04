@@ -3,13 +3,11 @@
 # Update /etc/hosts on master
 sudo /usr/sbin/run_ansible
 
-ssh -i ~/cluster.pem ec2-user@$1 "sudo yum install git -y"
-ssh -i ~/cluster.pem ec2-user@$1 "sudo amazon-linux-extras install ansible2 -y"
+ssh-keygen -R $i
+sudo ssh-keygen -R $i
 
-ssh -i ~/cluster.pem ec2-user@$1 "mkdir ~/keys/"
-sudo scp -i ~ddietz/cluster.pem -r /root/.ssh/ ec2-user@$1:~/keys/
-ssh -i ~/cluster.pem ec2-user@$1 "sudo mv ~ec2-user/keys/.ssh/ /root/"
-sudo scp -i ~ddietz/cluster.pem -r /root/.vaultpass ec2-user@$1:~/
-ssh -i ~/cluster.pem ec2-user@$1 "sudo mv ~ec2-user/.vaultpass /root/"
-ssh -i ~/cluster.pem ec2-user@$1 "sudo git clone git@github.com:ddietz89/cluster.git /root/cluster/"
-ssh -i ~/cluster.pem ec2-user@$1 "sudo ansible-playbook common.yml node.yml -i \"$1,\" --vault-password-file=/root/.vaultpass" 
+sudo scp -i ~ddietz/cluster.pem -r /root/.ssh/id_rsa* ec2-user@$1:~/
+sudo scp -i ~ddietz/cluster.pem /root/.vaultpass ec2-user@$1:~/
+scp -i /usr/sbin/bootstrap_node.sh  /root/.vaultpass ec2-user@$1:~/
+
+ssh -i ~ddietz/cluster.pem ec2-user@$1: "sudo ~ec2-user/bootstrap_node.sh"

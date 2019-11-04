@@ -20,3 +20,9 @@
     src: usr/sbin/configure_node.sh
     dest: /usr/sbin/configure_node.sh
     mode: '0755'
+
+- name: install bootstrap_node script
+  copy:
+    src: usr/sbin/bootsrap_node.sh
+    dest: /usr/sbin/bootsrap_node.sh
+    mode: '0755'
