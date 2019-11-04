@@ -16,8 +16,9 @@ instances = ec2.describe_instances()
 
 target_instance = None
 for inst in instances['Reservations']:
-    if {'Key': 'Name', 'Value': target_instance_string} in inst['Instances'][0]['Tags']:
-        target_instance = inst['Instances'][0]
+    if 'Tags' in inst['Instances'][0] and {'Key': 'Name', 'Value': target_instance_string} in inst['Instances'][0]['Tags']:
+        if inst['Instances'][0]['State']['Name'] == 'stopped' or inst['Instances'][0]['State']['Name'] == 'running':
+            target_instance = inst['Instances'][0]
 
 if target_instance is None:
     print "Couldn't find instance " + target_instance_string 
