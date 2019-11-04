@@ -23,10 +23,11 @@ try:
          InstanceType='t2.nano',
          KeyName='cluster',
          SecurityGroupIds=[
-        'sg-018fbf329acd16069',
-    ],
+            'sg-018fbf329acd16069',
+        ],
+        Placement = {'AvailabilityZone': 'us-east-2b'}
      )
-except ClientError as e:
+except Exception as e:
     print e
     sys.exit(1)
 
@@ -57,3 +58,5 @@ time.sleep(30)
 
 process = Popen("/usr/sbin/start_instance.py " + target_instance_string, shell=True, stdout=PIPE, stderr=PIPE)
 stdout, stderr = process.communicate()
+print stdout
+print stderr
