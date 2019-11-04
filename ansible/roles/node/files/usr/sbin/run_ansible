@@ -9,4 +9,5 @@ cd /root/cluster/ansible/
 export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 git pull
 
+export ANSIBLE_HOST_KEY_CHECKING=False
 ansible-playbook common.yml node.yml -i "`hostname`," --vault-password-file=/root/.vaultpass
