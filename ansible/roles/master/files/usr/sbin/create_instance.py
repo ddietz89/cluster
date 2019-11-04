@@ -47,3 +47,13 @@ stdout, stderr = process.communicate()
 
 process = Popen("/usr/sbin/configure_node.sh " + target_instance_string, shell=True, stdout=PIPE, stderr=PIPE)
 stdout, stderr = process.communicate()
+print stdout
+print stderr
+
+process = Popen("/usr/sbin/stop_instance.py " + target_instance_string, shell=True, stdout=PIPE, stderr=PIPE)
+stdout, stderr = process.communicate()
+
+time.sleep(30)
+
+process = Popen("/usr/sbin/start_instance.py " + target_instance_string, shell=True, stdout=PIPE, stderr=PIPE)
+stdout, stderr = process.communicate()

@@ -29,7 +29,7 @@ if target_instance is None:
 try:
     response = ec2.start_instances(InstanceIds=[target_instance['InstanceId']])
     print response
-except ClientError as e:
+except Error as e:
     print e
     sys.exit(1)
 
