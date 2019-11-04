@@ -15,6 +15,7 @@ git clone git@github.com:ddietz89/cluster.git
 
 cd cluster/ansible/
 
+cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 export ANSIBLE_HOST_KEY_CHECKING=False
 ansible-playbook common.yml node.yml -i "$1," --vault-password-file=/root/.vaultpass
 
