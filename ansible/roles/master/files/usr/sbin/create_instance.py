@@ -46,6 +46,19 @@ stdout, stderr = process.communicate()
 process = Popen("git -C ~/cluster/ commit ~/cluster/ansible/roles/common/files/etc/hosts -m 'Creating new host' && git -C ~/cluster/ push", shell=True, stdout=PIPE, stderr=PIPE)
 stdout, stderr = process.communicate()
 
+process = Popen("sudo /usr/sbin/run_ansible", shell=True, stdout=PIPE, stderr=PIPE)
+stdout, stderr = process.communicate()
+
+# Wait for instance to boot
+started = False
+count = 0
+while count < 50 and started == False:
+    time.sleep(5)
+    process = Popen("ssh -o StrictHostKeyChecking=no -i ~/cluster.pem ec2-user@" + target_instance_string + " echo hi", shell=True, stdout=PIPE, stderr=PIPE)
+    stdout, stderr = process.communicate()
+    if stdout.strip() == "hi":
+        started = True
+
 process = Popen("/usr/sbin/configure_node.sh " + target_instance_string, shell=True, stdout=PIPE, stderr=PIPE)
 stdout, stderr = process.communicate()
 print stdout
