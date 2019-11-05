@@ -3,6 +3,7 @@
 import boto3
 import sys
 from pprint import pprint
+from subprocess import Popen, PIPE
 
 if len(sys.argv) < 2:
     print "Usage: " + sys.argv[0] + " <instance_name>"
@@ -34,3 +35,5 @@ except ClientError as e:
 
 process = Popen("sudo scontrol update NodeName=" + target_instance_string + " State=DOWN", shell=True, stdout=PIPE, stderr=PIPE)
 stdout, stderr = process.communicate()
+print stdout 
+print stderr

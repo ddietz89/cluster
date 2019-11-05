@@ -27,3 +27,9 @@
     createhome: False
     uid: 1002
 
+- name: copy template slurm homedir
+  copy:
+    src: home/slurm/
+    dest: /home/slurm/
+    owner: slurm
+
