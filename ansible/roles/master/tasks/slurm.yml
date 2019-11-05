@@ -32,3 +32,16 @@
     src: usr/sbin/bootstrap_node.sh
     dest: /usr/sbin/bootstrap_node.sh
     mode: '0755'
+
+- name: install slurm_resume script
+  copy:
+    src: usr/sbin/slurm_resume.sh
+    dest: /usr/sbin/slurm_resume.sh
+    mode: '0755'
+
+- name: install slurm_suspend script
+  copy:
+    src: usr/sbin/slurm_suspend.sh
+    dest: /usr/sbin/slurm_suspend.sh
+    mode: '0755'
+
