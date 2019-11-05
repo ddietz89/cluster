@@ -57,8 +57,5 @@ print stderr
 
 time.sleep(5)
 
-process = Popen("sudo scontrol update NodeName=" + target_instance_string + " State=RESUME", shell=True, stdout=PIPE, stderr=PIPE)
-stdout, stderr = process.communicate()
-
-process = Popen("ssh " + target_instance_string + " \"sudo service slurmd restart\"", shell=True, stdout=PIPE, stderr=PIPE)
-stdout, stderr = process.communicate()
+#process = Popen("ssh " + target_instance_string + " \"sudo service slurmd restart\"", shell=True, stdout=PIPE, stderr=PIPE)
+#stdout, stderr = process.communicate()
