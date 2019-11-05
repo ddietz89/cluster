@@ -32,8 +32,3 @@ try:
 except ClientError as e:
     print e
     sys.exit(1)
-
-process = Popen("sudo scontrol update NodeName=" + target_instance_string + " State=DOWN", shell=True, stdout=PIPE, stderr=PIPE)
-stdout, stderr = process.communicate()
-print stdout 
-print stderr
