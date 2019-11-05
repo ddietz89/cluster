@@ -3,6 +3,12 @@
     name: slurmctld
     state: started
 
+- name: install create_instance script
+  copy:
+    src: usr/sbin/create_instance.py
+    dest: /usr/sbin/create_instance.py
+    mode: '0755'
+
 - name: install start_instance script
   copy:
     src: usr/sbin/start_instance.py
