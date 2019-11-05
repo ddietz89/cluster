@@ -8,7 +8,7 @@ import time
 
 if len(sys.argv) < 2:
     print "Usage: " + sys.argv[0] + " <instance_name>"
-    sys.exit(1)
+    sys.exit(2)
 
 target_instance_string = sys.argv[1]
 
@@ -24,7 +24,7 @@ for inst in instances['Reservations']:
 
 if target_instance is None:
     print "Couldn't find instance " + target_instance_string 
-    sys.exit(1)
+    sys.exit(3)
 
 
 pprint(inst)
@@ -33,7 +33,7 @@ try:
     print response
 except Exception as e:
     print e
-    sys.exit(1)
+    sys.exit(4)
 
 # Wait for instance to boot
 started = False
@@ -48,7 +48,7 @@ while count < 50 and started == False:
 
 if not started:
     print "Error! Startup timed out."
-    sys.exit(1)
+    sys.exit(5)
 
 process = Popen("ssh " + target_instance_string + " /usr/sbin/start_node.sh", shell=True, stdout=PIPE, stderr=PIPE)
 stdout, stderr = process.communicate()
