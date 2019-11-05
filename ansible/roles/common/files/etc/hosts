@@ -9,14 +9,14 @@
 172.31.19.9 master
 172.31.33.7 node01 
 172.31.30.179 node02
-0.0.0.0 node03
-0.0.0.0 node04
-0.0.0.0 node05
-0.0.0.0 node06
-0.0.0.0 node07
-0.0.0.0 node08
-0.0.0.0 node09
-0.0.0.0 node10
+1.1.1.1 node03
+1.1.1.1 node04
+1.1.1.1 node05
+1.1.1.1 node06
+1.1.1.1 node07
+1.1.1.1 node08
+1.1.1.1 node09
+1.1.1.1 node10
 127.0.0.1 localhost.localdomain localhost
 127.0.0.1 localhost4.localdomain4 localhost4
 
