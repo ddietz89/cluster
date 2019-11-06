@@ -40,7 +40,7 @@ started = False
 count = 0
 while count < 50 and started == False:
     time.sleep(5)
-    process = Popen("ssh " + target_instance_string + " echo hi", shell=True, stdout=PIPE, stderr=PIPE)
+    process = Popen("ssh -o ConnectTimeout=5 " + target_instance_string + " echo hi", shell=True, stdout=PIPE, stderr=PIPE)
     stdout, stderr = process.communicate()
     print "waiting..."
     if stdout.strip() == "hi":
@@ -50,12 +50,12 @@ if not started:
     print "Error! Startup timed out."
     sys.exit(5)
 
-process = Popen("ssh " + target_instance_string + " /usr/sbin/start_node.sh", shell=True, stdout=PIPE, stderr=PIPE)
+process = Popen("ssh -o ConnectTimeout=5 " + target_instance_string + " /usr/sbin/start_node.sh", shell=True, stdout=PIPE, stderr=PIPE)
 stdout, stderr = process.communicate()
 print stdout
 print stderr
 
 time.sleep(5)
 
-process = Popen("ssh " + target_instance_string + " \"sudo service slurmd start\"", shell=True, stdout=PIPE, stderr=PIPE)
+process = Popen("ssh -o ConnectTimeout=5 " + target_instance_string + " \"sudo service slurmd start\"", shell=True, stdout=PIPE, stderr=PIPE)
 stdout, stderr = process.communicate()
