@@ -14,7 +14,7 @@
          - mariadb-libs
          - mlocate
          - gcc
-         - gcc-fortran
+         - gcc-gfortran
          - git
          - readline-devel
          - openssl-devel
